@@ -1,80 +1,30 @@
-// App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Search from './components/Search';
 import './App.css';
-
-// Simple layout component
-const Layout = ({ children }) => {
-  return (
-    <div className="app">
-      <header className="app-header">
-        <nav>
-          <ul className="nav-links">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      
-      <main className="app-main">
-        {children}
-      </main>
-      
-      <footer className="app-footer">
-        <p>© 2024 My React App. All rights reserved.</p>
-      </footer>
-    </div>
-  );
-};
-
-// Page components
-const Home = () => (
-  <div className="page">
-    <h1>Home Page</h1>
-    <p>Welcome to the home page of our React application!</p>
-  </div>
-);
-
-const About = () => (
-  <div className="page">
-    <h1>About Page</h1>
-    <p>This is a simple React application with routing.</p>
-  </div>
-);
-
-const Contact = () => (
-  <div className="page">
-    <h1>Contact Page</h1>
-    <p>Get in touch with us!</p>
-  </div>
-);
-
-const NotFound = () => (
-  <div className="page">
-    <h1>404 - Page Not Found</h1>
-    <p>The page you're looking for doesn't exist.</p>
-  </div>
-);
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto">
+        <Search />
+        
+        {/* Optional: Add some instructions */}
+        <div className="max-w-2xl mx-auto mt-12 p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            How to use:
+          </h3>
+          <ol className="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-400">
+            <li>Enter a GitHub username in the search box</li>
+            <li>Click "Search User" or press Enter</li>
+            <li>View the user's profile information and stats</li>
+            <li>Click "View Full GitHub Profile" to visit their GitHub page</li>
+          </ol>
+          <div className="mt-4 text-sm text-gray-500 dark:text-gray-500">
+            <p>Try searching for: octocat, google, microsoft, facebook, or your own GitHub username!</p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
