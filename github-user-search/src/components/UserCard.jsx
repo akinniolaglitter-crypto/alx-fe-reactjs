@@ -52,6 +52,7 @@ const UserCard = ({ user }) => {
         </div>
       </div>
       
+      {/* This is the key line - make sure it references user.html_url */}
       <a
         href={user.html_url}
         target="_blank"
