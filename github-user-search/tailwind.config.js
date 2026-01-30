@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
+  darkMode: 'class',
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class', // or 'media' for system preference
   theme: {
     extend: {
       colors: {
@@ -13,6 +14,12 @@ module.exports = {
       },
       fontFamily: {
         'display': ['Inter', 'sans-serif'],
+      },
+      borderRadius: {
+        'DEFAULT': '0.25rem',
+        'lg': '0.5rem',
+        'xl': '0.75rem',
+        'full': '9999px',
       },
     },
   },
