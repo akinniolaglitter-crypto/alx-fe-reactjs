@@ -1,4 +1,5 @@
 // Search component for GitHub users - displays user profiles with html_url link
+// fetchUserData
 import React, { useState } from 'react';
 import { advancedSearchUsers } from '../services/githubService';
 import UserCard from './UserCard';
