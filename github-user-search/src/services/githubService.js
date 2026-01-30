@@ -45,7 +45,7 @@ export const fetchUserData = async (username) => {
       
       switch (status) {
         case 404:
-          throw new Error(`User "${username}" not found on GitHub`);
+          throw new Error(`Looks like we cant find the user "${username}"`);
         case 403:
           // Check if it's rate limiting
           if (data.message && data.message.includes('rate limit')) {
