@@ -2,7 +2,7 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: var(--card-bg); /* Optional: wrap app in a card-like container */
+  background-color: var(--card-bg); 
   border-radius: var(--radius);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   min-height: 80vh;
