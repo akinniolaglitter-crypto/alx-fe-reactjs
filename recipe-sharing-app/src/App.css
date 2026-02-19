@@ -1,0 +1,30 @@
+.App {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg); 
+  border-radius: var(--radius);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  min-height: 80vh;
+}
+
+/* Specific component overrides or layout utilities can go here if not in modules */
+.recipe-card {
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  transition: box-shadow 0.2s;
+}
+
+.recipe-card:hover {
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
