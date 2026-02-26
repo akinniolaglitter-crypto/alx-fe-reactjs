@@ -3,14 +3,14 @@ import { useState } from "react";
 function AddRecipeForm() {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
-  const [instructions, setInstructions] = useState("");
+  const [steps, setSteps] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Validation
-    if (!title || !ingredients || !instructions) {
+    if (!title || !ingredients || !steps) {
       setError("All fields are required.");
       return;
     }
@@ -28,7 +28,7 @@ function AddRecipeForm() {
     // Reset form
     setTitle("");
     setIngredients("");
-    setInstructions("");
+    setSteps("");
   };
 
   return (
@@ -75,8 +75,8 @@ function AddRecipeForm() {
             Preparation Steps
           </label>
           <textarea
-            value={instructions}
-            onChange={(e) => setInstructions(e.target.value)}
+            value={steps}
+            onChange={(e) => setSteps(e.target.value)}
             className="w-full border rounded-lg p-2 h-32 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
