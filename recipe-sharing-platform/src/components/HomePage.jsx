@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import data from "../data.json";
 
@@ -16,7 +17,8 @@ function HomePage() {
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {recipes.map((recipe) => (
-          <div
+          <Link
+            to={`/recipe/${recipe.id}`}
             key={recipe.id}
             className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl hover:scale-105 transition duration-300"
           >
@@ -34,7 +36,7 @@ function HomePage() {
                 {recipe.summary}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
