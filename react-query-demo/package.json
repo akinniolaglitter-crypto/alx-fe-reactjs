@@ -1,5 +1,5 @@
 {
-  "name": "form-handling-react",
+  "name": "react-query-demo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "formik": "^2.4.9",
+    "@tanstack/react-query": "^5.90.21",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "yup": "^1.7.1"
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -24,6 +23,9 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
-    "vite": "^7.3.1"
+    "vite": "^8.0.0-beta.13"
+  },
+  "overrides": {
+    "vite": "^8.0.0-beta.13"
   }
 }
