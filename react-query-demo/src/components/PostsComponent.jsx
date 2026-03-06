@@ -18,9 +18,7 @@ function PostsComponent() {
     <div>
       <h2>Posts</h2>
 
-      <button onClick={() => refetch()}>
-        Refetch Posts
-      </button>
+      <button onClick={refetch}>Refetch Posts</button>
 
       <ul>
         {data.slice(0, 5).map((post) => (
